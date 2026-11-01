@@ -22,9 +22,10 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "models", "xg_xgboost_model.joblib")
-FEATURE_PATH = os.path.join(os.path.dirname(__file__), "models", "xg_xgboost_features.joblib")
-DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "laliga_feature_engineered.csv")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+FEATURE_PATH = os.path.join(BASE_DIR, "xg_xgboost_features.joblib")
+DATA_PATH = os.path.join(BASE_DIR, "laliga_feature_engineered.csv")
 
 # Chỉ số đánh giá mô hình trên tập Test
 MODEL_METRICS = {
