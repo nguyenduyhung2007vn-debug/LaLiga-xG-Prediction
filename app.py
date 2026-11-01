@@ -148,19 +148,11 @@ def load_resources():
     # Tải mô hình XGBoost JSON
     xgb_model = xgb.XGBRegressor()
     xgb_model.load_model(
-        os.path.join(
-            os.path.dirname(__file__),
-            "models",
-            "xgboost_model.json"
-        )
+       os.path.join(BASE_DIR, "xgboost_model.json")
     )
 
         # Khôi phục Imputer
-    imputer_path = os.path.join(
-        os.path.dirname(__file__),
-        "models",
-        "imputer_statistics.json"
-    )
+    imputer_path = os.path.join(BASE_DIR, "imputer_statistics.json")
 
     with open(imputer_path, "r", encoding="utf-8") as f:
         statistics = json.load(f)
