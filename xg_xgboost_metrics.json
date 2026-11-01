@@ -1,0 +1,10 @@
+{
+    "model": "XGBoost Regressor",
+    "target": "xg",
+    "n_estimators": 300,
+    "max_depth": 3,
+    "learning_rate": 0.03,
+    "MAE": 0.5823917335797758,
+    "RMSE": 0.7378036019922698,
+    "R2": 0.19915714719095712
+}
